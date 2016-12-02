@@ -105,15 +105,17 @@
                     </tr>
                 </thead>
                 <tbody>
+<tbody>
                     <%for (PC c : p) {%>
                     <tr>
-                        <td><%=c.getDispo()%></td>
-                        <td><%=c.getUbicacion()%></td>
-                        <td><%=c.getInicio()%></td>
-                        <td><%=c.getFin()%></td>
-                        <td><button onclick="reg_pc(<%=c.getId()%>,<%=idUsuario%>)">Reservar</button></td>
+                        <td><%=c.getId() %></td>
+                        <td><%=c.getMesa ()%></td>
+                        <td><input type="text" class="form-control" id="codAlum" name="codAlum">
+                        <td><input type="text" class="form-control" id="horasReserva" name="horasReserva">
+                        <td><button onclick="reg_pc(<%=c.getId()%>)">Reservar</button></td>
                     </tr>
                     <%}%>
+                </tbody>
                 </tbody>
             </table>
         </div>
